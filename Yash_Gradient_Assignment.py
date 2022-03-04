@@ -2,7 +2,7 @@ from sympy import *
 def SolvePartialDifferention(X_point,Y_point):
     XY_value=list()
     x, y = symbols('x y', real=True)  
-    equation = (x*y) - (sqrt(x)/2)
+    equation = ((x**2)*y)-(x*(y**2))
     Differentiate_equation=diff(equation,x)
     X_value=Differentiate_equation.subs([(x,X_point),(y,Y_point)])
     Differentiate_equation=diff(equation,y)
